@@ -25,8 +25,10 @@ function AgeCalculator() {
 
   return (
     <>
+    <div className="box flex flex-col justify-center items-center w-72 md:w-96 h-auto m-11  p-2 bg-purple-400 border-1 rounded-md shadow-lg shadow-purple-600">
+      <h1 className="text-white text-lg font-semibold mb-4">Age Calculator</h1>
       <label htmlfor="month"> Month</label>
-      <input
+      <input className="input md:w-44 w-28 pl-2 rounded-md mb-2"
         type="number"
         id="month"
         value={month}
@@ -34,7 +36,7 @@ function AgeCalculator() {
         placeholder="MM"
       ></input>
       <label htmlfor="day"> Day</label>
-      <input
+      <input className="input w-28 md:w-44 pl-2 rounded-md mb-2"
         type="number"
         id="day"
         value={day}
@@ -42,15 +44,17 @@ function AgeCalculator() {
         placeholder="DD"
       ></input>
       <label htmlfor="year"> Year</label>
-      <input
+      <input className="input w-28 pl-2 md:w-44 rounded-md mb-2"
         type="number"
         id="year"
         value={year}
         onChange={(e) => setYear(e.target.value)}
         placeholder="YYYY"
       ></input>
-      <button onClick={handleAgeCalculate}> calculate</button>
-      <div>Your age is :{age}</div>
+      <button type="button" className="button w-28 border-purple-600 border-1 rounded-xl p-1 text-center mt-6 mb-4 bg-purple-500 shadow-lg shadow-purple-600" onClick={handleAgeCalculate}> Calculate</button>
+      <div className="box1 text-cyan-50 font-medium">Your age is: {age} years old. </div>
+      </div>
+      
     </>
   );
 }
